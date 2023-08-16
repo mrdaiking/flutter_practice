@@ -59,18 +59,63 @@ class _TripPageState extends State<TripPage> {
             child: Padding(
               padding: EdgeInsets.all(20),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  SizedBox(
+                    height: 40
+                  ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    textBaseline: TextBaseline.alphabetic,
                     children: <Widget>[
-                      Text('1', style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),)
+                      Text('1', style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),),
+                      Text('/4', style: TextStyle(color: Colors.white, fontSize: 15),)
                     ],
+                  ),
+                  Expanded(
+                    child: Column (
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text('USA', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold),),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Container(
+                              margin: EdgeInsets.only(right: 3),
+                              child: Icon(Icons.star, color: Colors.yellow, size: 15,),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 3),
+                              child: Icon(Icons.star, color: Colors.yellow, size: 15,),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 3),
+                              child: Icon(Icons.star, color: Colors.yellow, size: 15,),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 3),
+                              child: Icon(Icons.star, color: Colors.yellow, size: 15,),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Icon(Icons.star, color: Colors.grey, size: 15,),
+                            ),
+                            Text('4.0', style: TextStyle(color: Colors.white70),),
+                            Text('(2300)', style: TextStyle(color: Colors.white38, fontSize: 12),),
+
+                          ],
+                        )
+                      ],
+                    )
                   )
                 ]
               ),
             ),
-
         ),
-
       );
   }
 }
